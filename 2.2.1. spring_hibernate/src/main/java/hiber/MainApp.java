@@ -3,6 +3,7 @@ package hiber;
 import hiber.config.AppConfig;
 import hiber.model.Car;
 import hiber.model.User;
+import hiber.service.CarService;
 import hiber.service.UserService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -31,7 +32,7 @@ public class MainApp {
          System.out.println();
       }
 
-      List<User> usersByCarModelAndSeries = userService.usersByCarModelAndSeries("a", 1);
+      List<User> usersByCarModelAndSeries = userService.getUsersByCarParams("Test", 1);
       for (User user : usersByCarModelAndSeries) {
          System.out.println(user);
          System.out.println();
